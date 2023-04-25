@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #393053;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header {
+  height: 5vh;
+  background-color: #18122b;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-title {
+  margin-top: 60px;
+  text-align: center;
+  height: 130px;
+}
+
+.game-title > h1 {
+  font-size: 48px;
+}
+.game-title > h3 {
+  font-size: 26px;
+}
+
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.card {
+  width: 180px;
+  height: 240px;
+  background-color: #635985;
+  font-size: 64px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.rock {
+  position: relative;
+  left: -40px;
+  top: 50px;
+  transform: rotate(-25deg);
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.rock:hover {
+  transform: translate(-10px, -20px) rotate(-25deg);
+  box-shadow: -6px 16px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card.scissors {
+  position: relative;
+  left: 40px;
+  top: 50px;
+  transform: rotate(25deg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.scissors:hover {
+  transform: translate(10px, -20px) rotate(25deg);
+  box-shadow: 6px 16px 20px rgba(0, 0, 0, 0.2);
+}
+.card.paper {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card.paper:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.2);
+}
+.game-score {
+  display: flex;
+  gap: 30px;
+  font-size: 84px;
+  margin-top: 40px;
+}
