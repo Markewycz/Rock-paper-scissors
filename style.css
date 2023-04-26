@@ -4,32 +4,47 @@
   box-sizing: border-box;
 }
 
+/* font-family: 'Bungee Spice', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Nabla', cursive;
+font-family: 'Permanent Marker', cursive; */
+
 body {
-  background-color: #393053;
+  background-color: #393e46;
   height: 100vh;
   color: #fff;
   overflow: hidden;
 }
+main {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
 
 .header {
   height: 5vh;
-  background-color: #18122b;
+  background-color: #222831;
   padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: max-content;
+  font-family: "Bungee Spice", cursive;
+  font-size: 32px;
 }
 
 .game-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .game-title {
-  margin-top: 60px;
+  margin-top: 30px;
   text-align: center;
   height: 130px;
+  font-family: "Permanent Marker", cursive;
 }
 
 .game-title > h1 {
@@ -48,13 +63,16 @@ body {
 .card {
   width: 180px;
   height: 240px;
-  background-color: #635985;
+  background-color: #222831;
   font-size: 64px;
   border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .card.rock {
@@ -94,4 +112,13 @@ body {
   gap: 30px;
   font-size: 84px;
   margin-top: 40px;
+  font-family: "Permanent Marker", cursive;
+  color: #eeeeee;
+}
+
+.player-choice,
+.pc-choice {
+  flex: 1;
+  text-align: center;
+  font-size: 124px;
 }
