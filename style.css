@@ -14,6 +14,9 @@ body {
   height: 100vh;
   color: #fff;
   overflow: hidden;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 main {
   display: flex;
@@ -43,7 +46,7 @@ main {
 .game-title {
   margin-top: 30px;
   text-align: center;
-  height: 130px;
+  min-height: 160px;
   font-family: "Permanent Marker", cursive;
 }
 
@@ -58,6 +61,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: 30px;
   cursor: pointer;
 }
 .card {
@@ -70,9 +74,6 @@ main {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .card.rock {
@@ -84,8 +85,8 @@ main {
 }
 
 .card.rock:hover {
-  transform: translate(-10px, -20px) rotate(-25deg);
-  box-shadow: -6px 16px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(-5px, -10px) rotate(-25deg);
+  box-shadow: -6px 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card.scissors {
@@ -97,15 +98,15 @@ main {
 }
 
 .card.scissors:hover {
-  transform: translate(10px, -20px) rotate(25deg);
-  box-shadow: 6px 16px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(5px, -10px) rotate(25deg);
+  box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.2);
 }
 .card.paper {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .card.paper:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 .game-score {
   display: flex;
@@ -116,9 +117,37 @@ main {
   color: #eeeeee;
 }
 
+.player-score,
+.pc-score {
+  min-width: 80px;
+  text-align: center;
+}
+
 .player-choice,
 .pc-choice {
   flex: 1;
   text-align: center;
   font-size: 124px;
+}
+
+.btn {
+  width: 80px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #eeeeee;
+  font-family: "Permanent Marker", cursive;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.noHover {
+  pointer-events: none;
 }
